@@ -8,5 +8,7 @@ html, body {
 }
 
 canvas {
+	top: 0;
+	left: 0;
 	display: block;
 }
