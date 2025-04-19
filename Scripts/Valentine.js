@@ -193,7 +193,18 @@ const prompt = new PromptElement(questionText, yesButton, noButton);
 
 // Button click alerts
 yesButton.onClick = () => {
-	alert("Yay! 💖");
+	if (selectedCoax < 25) {
+		alert("Awww you picked Yes! I won’t mention how the No button was totally running away... totally legit decision 😏.");
+	}
+	if (selectedCoax >= 25 && selectedCoax < 50) {
+		alert("You clicked yes? Wow, what a completely voluntary and not-at-all manipulated choice! 😇");
+	}
+	else if (selectedCoax >= 50 && selectedCoax < 75) {
+		alert("You thought you had a choice? That’s cute.");
+	}
+	else if (selectedCoax >= 75) {
+		alert("Wait... you didn’t even hover over No. That was fast. Should I be worried? 👀");
+	}
 };
 noButton.onClick = () => {
 	if (growYes) {
@@ -234,7 +245,7 @@ function init() {
 	else if (selectedCoax >= 50 && selectedCoax < 75) {
 		fakeNoButton = true;
 	}
-	else {
+	else if (selectedCoax >= 75) {
 		hoverColorNoButton = true;
 		noButton.disabled = true;
 		noButton.fillColor = '#999999';
@@ -350,7 +361,11 @@ canvas.addEventListener('mousemove', (event) => {
 	}
 
 	// Coax mode 4 – hover color even when disabled
-	if (hoverColorNoButton && moving) {
+	if (selectedCoax >= 75) {
+		// Force grey color on "No" button and block any hover effects
+		prompt.noButton.fillColor = '#999999';
+		prompt.noButton.textElement.color = '#666666';
+	} else if (hoverColorNoButton) {
 		if (isHoveringNo && !noButtonHovered) {
 			noButtonHovered = true;
 			prompt.noButton.fillColor = '#ffaaaa';
