@@ -5,6 +5,9 @@ html, body {
 	height: 100%;
 	overflow: hidden;
 	background-color: #ffe6ff;
+	background-image: url("../Images/ValentinesBackground.jpg");
+	background-size:cover;
+	background-repeat: no-repeat;
 }
 
 canvas {
