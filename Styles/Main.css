@@ -1,0 +1,22 @@
+html{
+	scroll-behavior: smooth;
+}
+body {
+	margin: 0;
+	color: white;
+	hyphens: auto;
+	text-align: center;
+	align-items: center;
+	word-spacing: 0.01em;
+	letter-spacing: normal;
+	justify-content: center;
+	background-color: #606060;
+	font-family: Verdana, sans-serif;
+}
+
+/* Footer Section */
+div.Footer {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #252525;
+}

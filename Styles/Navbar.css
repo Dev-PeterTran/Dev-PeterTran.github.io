@@ -1,0 +1,56 @@
+#Navbar {
+	top: 0;
+	margin: 0;
+	padding-left: 10%;
+	padding-right: 10%;
+	box-sizing: border-box; 
+	
+	width: 100%;
+	z-index: 1000;
+	position: fixed;
+	overflow: hidden;
+	list-style-type: none;
+	background-color: #252525;
+	
+	font-size: 24px;
+}
+
+/*Individual Nav Item*/
+.LeftNavItem {
+	float: left;
+}
+.RightNavItem {
+	float: right;
+	padding-left: 5px;
+	padding-right: 5px;
+	position: relative;
+}
+
+li a {
+	color: white;
+	display: block;
+	padding: 16px 20px;
+	text-align: center;
+	align-items: center;
+	text-decoration: none;
+}
+
+/*Hover effect*/
+li a::after {
+	left: 0;
+	width: 0%;
+	height: 3px;
+	content: '';
+	bottom: 10px;
+	position: absolute;
+	background-color: white;
+
+	transition: width 0.3s ease, background-color 0.3s ease;
+}
+li a:hover {
+	color: #0077ff;
+}
+li a:hover::after {
+	width: 100%;
+	background-color: #0077ff;
+}
