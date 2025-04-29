@@ -4,13 +4,11 @@
 	height: 70px;
 	padding: 0 10%;
 	box-sizing: border-box;
-
 	width: 100%;
 	z-index: 1000;
 	display: flex;
 	font-size: 24px;
 	position: fixed;
-	position: relative;
 	align-items: center;
 	background-color: #252525;
 	justify-content: space-between;
@@ -40,18 +38,20 @@
 .NavItems li a::after {
 	content: '';
 	position: absolute;
-	left: 0;
+	left: 50%;
+	transform: translateX(-50%) scaleX(0);
+	transform-origin: center;
 	bottom: 10px;
-	width: 0%;
+	width: 100%;
 	height: 3px;
 	background-color: white;
-	transition: width 0.3s ease, background-color 0.3s ease;
+	transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .NavItems li a:hover {
 	color: #0077ff;
 }
 .NavItems li a:hover::after {
-	width: 100%;
+	transform: translateX(-50%) scaleX(1);
 	background-color: #0077ff;
 }
 
@@ -86,6 +86,37 @@
 	background-color: #0077ff;
 }
 
+/* Dropdown container */
+.Dropdown {
+	position: relative;
+}
+
+/* Default desktop dropdown behavior */
+.Dropdown-Menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #252525;
+	min-width: 200px;
+	text-align: left;
+	z-index: 1001;
+	overflow: hidden;
+	max-height: 0;
+	opacity: 0;
+	transform: translateY(-10px);
+	pointer-events: none;
+	transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+/* Hover dropdown for desktop */
+.Dropdown:hover .Dropdown-Menu {
+	max-height: 500px;
+	opacity: 1;
+	transform: translateY(0);
+	pointer-events: auto;
+}
 /* Hamburger */
 .Hamburger {
 	display: none;
@@ -106,20 +137,48 @@
 		display: flex;
 		z-index: 3;
 	}
+
 	.NavItems {
-		display: none;
 		flex-direction: column;
 		width: 100%;
 		background-color: #252525;
 		position: absolute;
 		top: 70px;
 		left: 0;
+		overflow: hidden;
+		max-height: 0;
+		opacity: 0;
+		transform: translateY(-10px);
+		transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+		pointer-events: none;
 	}
+
 	.NavItems.active {
-		display: flex;
+		max-height: 500px; /* large enough to fit items */
+		opacity: 1;
+		transform: translateY(0);
+		pointer-events: auto;
 	}
+
 	.NavItems li {
 		text-align: center;
 		width: 100%;
+	}
+
+	.Dropdown {
+		position: static;
+	}
+
+	.Dropdown-Menu {
+		position: static;
+		background-color: #252525;
+		max-height: none;
+		opacity: 1;
+		transform: none;
+		pointer-events: auto;
+	}
+
+	.Dropdown-Menu li a {
+		padding: 12px 20px;
 	}
 }

@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Valentines Coax</title>
-		
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<title>Valentines Coax</title>
 
-		<link rel="StyleSheet" href="../Styles/Valentine.css">
-		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-	</head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="StyleSheet" href="../Styles/Navbar.css">
+	<link rel="StyleSheet" href="../Styles/Valentine.css">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
 	
-	<body>
-		<canvas id="valentineCanvas">
-			Your browser does not support the HTML canvas tag.
-		</canvas>
-		
-		<script src="../Scripts/Valentine.js"></script>
-	</body>
+<body>
+	<!-- Navigation Bar -->
+	<nav id="Navbar">
+		<a href="../index.html" class="Brand">Peter Tran</a>
+
+		<!-- Hamburger Icon -->
+		<div class="Hamburger" onclick="ToggleMenu()">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+
+		<!-- Navigation Items -->
+		<ul class="NavItems" id="NavItems">
+			<li class="RightNavItem"><a href="#">About</a></li>
+			<li class="Dropdown">
+				<a href="#" onclick="ToggleDropdown(event)">Projects</a>
+				<ul class="Dropdown-Menu">
+					<li><a href="#">Personal Projects</a></li>
+					<li><a href="../Pages/ValentinesCoax.html">Valentine's Coax</a></li>
+				</ul>
+			</li>
+			<li class="RightNavItem"><a href="#">Resume</a></li>
+			<li class="RightNavItem"><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+
+	<canvas id="valentineCanvas">
+		Your browser does not support the HTML canvas tag.
+	</canvas>
+
+	<script src="../Scripts/Navbar.js"></script>
+	<script src="../Scripts/Valentine.js"></script>
+</body>
 </html>
