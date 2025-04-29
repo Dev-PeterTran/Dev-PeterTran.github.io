@@ -1,56 +1,125 @@
 #Navbar {
 	top: 0;
 	margin: 0;
-	padding-left: 10%;
-	padding-right: 10%;
-	box-sizing: border-box; 
-	
+	height: 70px;
+	padding: 0 10%;
+	box-sizing: border-box;
+
 	width: 100%;
 	z-index: 1000;
-	position: fixed;
-	overflow: hidden;
-	list-style-type: none;
-	background-color: #252525;
-	
+	display: flex;
 	font-size: 24px;
+	position: fixed;
+	position: relative;
+	align-items: center;
+	background-color: #252525;
+	justify-content: space-between;
 }
 
-/*Individual Nav Item*/
-.LeftNavItem {
-	float: left;
+/* NavItems */
+.NavItems {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
-.RightNavItem {
-	float: right;
-	padding-left: 5px;
-	padding-right: 5px;
+/* Individual Nav Item */
+.NavItems li {
 	position: relative;
 }
-
-li a {
+/* Links */
+.NavItems li a {
 	color: white;
-	display: block;
-	padding: 16px 20px;
-	text-align: center;
-	align-items: center;
 	text-decoration: none;
+	padding: 16px 20px;
+	display: block;
+	position: relative;
 }
-
-/*Hover effect*/
-li a::after {
+/* Hover underline for nav items */
+.NavItems li a::after {
+	content: '';
+	position: absolute;
 	left: 0;
+	bottom: 10px;
 	width: 0%;
 	height: 3px;
-	content: '';
-	bottom: 10px;
-	position: absolute;
 	background-color: white;
-
 	transition: width 0.3s ease, background-color 0.3s ease;
 }
-li a:hover {
+.NavItems li a:hover {
 	color: #0077ff;
 }
-li a:hover::after {
+.NavItems li a:hover::after {
 	width: 100%;
 	background-color: #0077ff;
+}
+
+/* Branding */
+.Brand {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 24px;
+	position: relative;
+	display: inline-block;
+	z-index: 2;
+}
+/* Full bar underline on Brand hover */
+.Brand::after {
+	content: '';
+	position: absolute;
+	left: -10%;
+	width: 120%;
+	height: 3px;
+	bottom: -5px;
+	background-color: white;
+	transform: scaleX(0);
+	transform-origin: center;
+	transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.Brand:hover {
+	color: #0077ff;
+}
+.Brand:hover::after {
+	transform: scaleX(1);
+	background-color: #0077ff;
+}
+
+/* Hamburger */
+.Hamburger {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+}
+.Hamburger div {
+	width: 25px;
+	height: 3px;
+	background-color: white;
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+	.Hamburger {
+		display: flex;
+		z-index: 3;
+	}
+	.NavItems {
+		display: none;
+		flex-direction: column;
+		width: 100%;
+		background-color: #252525;
+		position: absolute;
+		top: 70px;
+		left: 0;
+	}
+	.NavItems.active {
+		display: flex;
+	}
+	.NavItems li {
+		text-align: center;
+		width: 100%;
+	}
 }

@@ -10,12 +10,12 @@ body {
 	word-spacing: 0.01em;
 	letter-spacing: normal;
 	justify-content: center;
-	background-color: #606060;
+	background-color: #353535;
 	font-family: Verdana, sans-serif;
 }
 
 /* Footer Section */
-div.Footer {
+.Footer {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	background-color: #252525;

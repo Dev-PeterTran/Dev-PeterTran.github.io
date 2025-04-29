@@ -11,25 +11,45 @@
 	</head>
 	
 	<body>
-		<ul id="Navbar">
-			<li class="LeftNavItem"><a href="#">Peter Tran</a></li>
-			<li class="RightNavItem"><a href="#">Contact</a></li>
-			<li class="RightNavItem"><a href="#">Resume</a></li>
-			
-			<li class="RightNavItem"><a class="Dropdown-Link" href="#">Projects</a></li>
-			
-			<li class="RightNavItem"><a href="#">About</a></li>
-		</ul>
-		
+		<!-- Navigation Bar -->
+		<nav id="Navbar">
+			<a href="#" class="Brand">Peter Tran</a>
+
+			<!-- Hamburger Icon -->
+			<div class="Hamburger" onclick="toggleMenu()">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+
+			<!-- Navigation Items -->
+			<ul class="NavItems" id="NavItems">
+				<li class="RightNavItem"><a href="#">Contact</a></li>
+				<li class="RightNavItem"><a href="#">Resume</a></li>
+				<li class="RightNavItem"><a href="#">Projects</a></li>
+				<li class="RightNavItem"><a href="#">About</a></li>
+			</ul>
+		</nav>
+
+		<!-- Content below -->
+		<div style="height: 1500px; padding-top: 100px;">
+			<h1>Welcome to my website</h1>
+			<p>Scroll down to see more!</p>
+		</div>
+
 		<!-- About Section -->
-		
 		<!-- Projects Section -->
-		
 		<!-- Contact Section -->
-		
 		<!-- Footer Section-->
 		<div class="Footer">
 			<p>Copyright &copy by Peter Tran | All images, logos are used with permission.</p>
 		</div>
+
+		<script>
+			function toggleMenu() {
+				const navItems = document.getElementById('NavItems');
+				navItems.classList.toggle('active');
+			}
+		</script>
 	</body>
 </html>
