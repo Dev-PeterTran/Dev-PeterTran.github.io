@@ -34,6 +34,13 @@
 	display: block;
 	position: relative;
 }
+.NavItems li a.active {
+	color: #0077ff;
+}
+.NavItems li a.active::after {
+	transform: translateX(-50%) scaleX(1);
+	background-color: #0077ff;
+}
 /* Hover underline for nav items */
 .NavItems li a::after {
 	content: '';
