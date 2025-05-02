@@ -21,6 +21,13 @@ window.addEventListener('load', () => {
     }
 });
 
+document.querySelectorAll('.NavItems a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 800) {
+            document.getElementById('NavItems').classList.remove('active');
+        }
+    });
+});
 
 const sections = document.querySelectorAll("div[id]");
 const navLinks = document.querySelectorAll(".NavItems li a");
