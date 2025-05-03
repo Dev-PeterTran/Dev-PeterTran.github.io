@@ -5,7 +5,7 @@ const canvasContent = canvas.getContext('2d');
 
 // Generic text object
 class TextElement {
-	constructor ({content, font, color, align = 'center', baseline = 'middle', x, y } = {}) {
+	constructor({ content, font, color, align = 'center', baseline = 'middle', x, y } = {}) {
 		this.content = content;
 		this.font = font;
 		this.color = color;
@@ -14,8 +14,8 @@ class TextElement {
 		this.x = x;
 		this.y = y;
 	}
-	
-	draw (canvasContent) {
+
+	draw(canvasContent) {
 		canvasContent.fillStyle = this.color;
 		canvasContent.font = this.font;
 		canvasContent.textAlign = this.align;
@@ -35,12 +35,12 @@ class ButtonElement {
 	textElement;
 
 	disabled = false;
-	
+
 	// Text element in button
-	constructor (text, textFont, fillColor, textColor, radius = 10) {
+	constructor(text, textFont, fillColor, textColor, radius = 10) {
 		this.fillColor = fillColor;
 		this.radius = radius;
-		
+
 		this.textElement = new TextElement({
 			content: text,
 			font: textFont,
@@ -51,7 +51,7 @@ class ButtonElement {
 			y: this.y + this.height / 2
 		});
 	}
-	
+
 	// Drawing rounded corners on button
 	#drawRoundedRect(canvasContent) {
 		const r = this.radius;
@@ -72,19 +72,19 @@ class ButtonElement {
 		canvasContent.quadraticCurveTo(x, y, x + r, y);
 		canvasContent.closePath();
 	}
-	
+
 	setPosition(x, y) {
 		this.x = x;
 		this.y = y;
 		this.updateTextPosition();
 	}
-	
+
 	setSize(width, height) {
 		this.width = width;
 		this.height = height;
 		this.updateTextPosition();
 	}
-	
+
 	updateTextPosition() {
 		const fontSizeMatch = this.textElement.font.match(/(\d+)px/);
 		const fontSize = fontSizeMatch ? parseInt(fontSizeMatch[1]) : 16;
@@ -93,7 +93,7 @@ class ButtonElement {
 		this.textElement.x = this.x + this.width / 2;
 		this.textElement.y = this.y + (this.height / 2) + (fontSize / 2 - fontSize * fudgeFactor);
 	}
-	
+
 	draw(canvasContent) {
 		if (this.disabled && !hoverColorNoButton) {
 			canvasContent.fillStyle = '#999999';
@@ -107,7 +107,7 @@ class ButtonElement {
 		canvasContent.fill();
 		this.textElement.draw(canvasContent);
 	}
-	
+
 	onClick = null;
 
 	contains(mouseX, mouseY) {
@@ -131,13 +131,13 @@ class PromptElement {
 		this.width = 0;
 		this.height = 0;
 	}
-	
+
 	// Position the whole group centered on (centerX, centerY)
 	setCenterPosition(centerX, centerY) {
 		// Layout spacing
 		const buttonSpacing = 160; // More space between buttons
 		const verticalSpacing = 30; // Space between question and buttons
-		
+
 		const buttonWidth = 125;
 		const buttonHeight = 70;
 
@@ -176,7 +176,7 @@ class PromptElement {
 //#region Object creations
 
 // Main question
-const questionText = new TextElement ({
+const questionText = new TextElement({
 	content: "Will you be my valentine?",
 	font: '60px cursive',
 	color: '#000000',
@@ -222,7 +222,7 @@ noButton.onClick = () => {
 function resizeCanvas() {
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
-	
+
 	prompt.setCenterPosition(canvas.width / 2, canvas.height / 2);
 }
 
@@ -290,7 +290,7 @@ function update() {
 	}
 
 	prompt.draw(canvasContent);
-	
+
 	requestAnimationFrame(update);
 }
 
@@ -375,7 +375,7 @@ canvas.addEventListener('mousemove', (event) => {
 		}
 	}
 
-	
+
 
 	// Change cursor
 	canvas.style.cursor = isHoveringYes || isHoveringNo ? 'pointer' : 'default';

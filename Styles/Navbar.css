@@ -1,4 +1,7 @@
-﻿#Navbar {
+﻿/* =======================
+   Navigation Bar Styling
+   ======================= */
+#Navbar {
 	top: 0;
 	margin: 0;
 	height: 70px;
@@ -14,7 +17,9 @@
 	justify-content: space-between;
 }
 
-/* NavItems */
+/* =======================
+   Navigation Items (Desktop)
+   ======================= */
 .NavItems {
 	display: flex;
 	align-items: center;
@@ -22,11 +27,13 @@
 	margin: 0;
 	padding: 0;
 }
-/* Individual Nav Item */
+
+/* Each individual navigation item */
 .NavItems li {
 	position: relative;
 }
-/* Links */
+
+/* Navigation links (unstyled and styled) */
 .NavItems li a {
 	color: white;
 	text-decoration: none;
@@ -34,14 +41,18 @@
 	display: block;
 	position: relative;
 }
+
+/* Active nav link styling */
 .NavItems li a.active {
 	color: #0077ff;
 }
+
 .NavItems li a.active::after {
 	transform: translateX(-50%) scaleX(1);
 	background-color: #0077ff;
 }
-/* Hover underline for nav items */
+
+/* Underline animation effect on hover */
 .NavItems li a::after {
 	content: '';
 	position: absolute;
@@ -54,15 +65,20 @@
 	background-color: white;
 	transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
+/* Hover state for nav links */
 .NavItems li a:hover {
 	color: #0077ff;
 }
+
 .NavItems li a:hover::after {
 	transform: translateX(-50%) scaleX(1);
 	background-color: #0077ff;
 }
 
-/* Branding */
+/* =======================
+   Branding (Logo/Name)
+   ======================= */
 .Brand {
 	color: white;
 	text-decoration: none;
@@ -72,7 +88,8 @@
 	display: inline-block;
 	z-index: 2;
 }
-/* Full bar underline on Brand hover */
+
+/* Underline animation on hover for Brand */
 .Brand::after {
 	content: '';
 	position: absolute;
@@ -85,20 +102,24 @@
 	transform-origin: center;
 	transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
 .Brand:hover {
 	color: #0077ff;
 }
+
 .Brand:hover::after {
 	transform: scaleX(1);
 	background-color: #0077ff;
 }
 
-/* Dropdown container */
+/* =======================
+   Dropdown Menu (Desktop)
+   ======================= */
 .Dropdown {
 	position: relative;
 }
 
-/* Default desktop dropdown behavior */
+/* Hidden by default */
 .Dropdown-Menu {
 	list-style: none;
 	padding: 0;
@@ -117,7 +138,8 @@
 	pointer-events: none;
 	transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
 }
-/* Hover dropdown for desktop */
+
+/* Show dropdown menu on hover */
 .Dropdown:hover .Dropdown-Menu {
 	max-height: 500px;
 	opacity: 1;
@@ -125,12 +147,15 @@
 	pointer-events: auto;
 }
 
-/* Hamburger */
+/* =======================
+   Hamburger Menu (Mobile)
+   ======================= */
 .Hamburger {
 	display: none;
 	flex-direction: column;
 	cursor: pointer;
 }
+
 .Hamburger div {
 	width: 25px;
 	height: 3px;
@@ -139,7 +164,9 @@
 	transition: all 0.3s ease;
 }
 
-/* Triangle next to "Projects" */
+/* =======================
+   Dropdown Triangle Icon
+   ======================= */
 .Triangle {
 	display: inline-block;
 	margin-left: 4px;
@@ -150,24 +177,30 @@
 	vertical-align: middle;
 	margin-top: -5px;
 }
+
+/* Change triangle color on hover */
 .NavItems li a:hover .Triangle {
 	border-left-color: #0077ff;
 }
 
-/* Rotate triangle on hover (desktop only) */
+/* Rotate triangle when hovered (desktop only) */
 @media (min-width: 801px) {
 	.Dropdown:hover .Triangle {
 		transform: rotate(90deg);
 	}
 }
 
-/* Responsive Styles */
+/* =======================
+   Responsive (Mobile View)
+   ======================= */
 @media (max-width: 800px) {
+	/* Show hamburger icon in mobile view */
 	.Hamburger {
 		display: flex;
 		z-index: 3;
 	}
 
+	/* Nav items stack vertically in mobile */
 	.NavItems {
 		flex-direction: column;
 		width: 100%;
@@ -183,18 +216,21 @@
 		pointer-events: none;
 	}
 
+	/* Mobile menu active (open) state */
 	.NavItems.active {
-		max-height: 500px; /* large enough to fit items */
+		max-height: 500px;
 		opacity: 1;
 		transform: translateY(0);
 		pointer-events: auto;
 	}
 
+	/* Center text and full-width menu items */
 	.NavItems li {
 		text-align: center;
 		width: 100%;
 	}
 
+	/* Flatten dropdown menu in mobile (no absolute positioning) */
 	.Dropdown {
 		position: static;
 	}
@@ -209,10 +245,12 @@
 		padding: 0 15%;
 	}
 
+	/* Adjust spacing for dropdown items in mobile */
 	.Dropdown-Menu li a {
 		padding: 15px 20px;
 	}
 
+	/* Always rotate triangle in mobile view */
 	.Triangle {
 		transform: rotate(90deg);
 	}
