@@ -1,0 +1,70 @@
+/*  ===============
+	General Webpage 
+	=============== */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	color: white;
+	hyphens: auto;
+	text-align: center;
+	align-items: center;
+	word-spacing: 0.01em;
+	letter-spacing: normal;
+	justify-content: center;
+	background-color: #353535;
+	font-family: Verdana, sans-serif;
+}
+
+/*  =================
+	Main Body Content
+	================= */
+.MainBodyContent {
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+/*  ==================
+	Divider and Header
+	================== */
+.Divider {
+	gap: 1rem;
+	display: flex;
+	color: #0066ff;
+	font-size: 50px;
+
+	padding-bottom: 60px;
+	align-items: center;
+	justify-content: center;
+	
+}
+.Divider hr {
+	flex: 1;
+	border: none;
+	height: 5px;
+	border-radius: 10px;
+	background-color: #0066ff;
+}
+
+/*  ===========================
+	Inverted Divider and Header
+	=========================== */
+.InvertedDivider {
+	gap: 1rem;
+	display: flex;
+	color: #000000;
+	font-size: 50px;
+
+	padding-bottom: 60px;
+	align-items: center;
+	justify-content: center;
+}
+.InvertedDivider hr {
+	flex: 1;
+	border: none;
+	height: 5px;
+	border-radius: 10px;
+	background-color: #000000;
+}

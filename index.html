@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Home</title>
-		
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<link rel="StyleSheet" href="Styles/Main.css">
-		<link rel="StyleSheet" href="Styles/Navbar.css">
-	</head>
+<head>
+	<title>Home</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="StyleSheet" href="Styles/Main.css">
+	<link rel="StyleSheet" href="Styles/Navbar.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 	
 	<body>
 		<!-- Navigation Bar -->
@@ -37,46 +38,65 @@
 			</ul>
 		</nav>
 
-		<!-- Content below -->
-		<div style="height: 1500px; padding-top: 100px;">
-			<h1>Welcome to my website</h1>
-			<p>Scroll down to see more!</p>
-		</div>
+		<div class="MainBodyContent">
+			<!-- Content below -->
+			<div style="height: 500px; padding-top: 100px;">
+				<h1>Welcome to my website</h1>
+				<p>Scroll down to see more!</p>
+			</div>
 
-		<!-- About Section -->
-		<div class="About" id="About" style="height: 1500px; padding-top: 100px;">
-			<h1>About Me</h1>
-			<p>
-				Hi! I'm Peter, a software developer and game programmer based in Canada.
+			<!-- Introudction Section -->
+			<div class="IntroudctionSction" id="About">
+				<div class="Divider">
+					<hr><span>About Me</span><hr>
+				</div>
 
-				My passion for game development began early, sparked by modding a childhood game, that introduced me to the world of programming. I’ve since continued to grow my skills through formal education, studying Game Programming at Humber College and Information Technology at York University.
-				<br><br>
-				I enjoy participating in game jams, as they are instrumental in honing my skills in time management, project scoping, and team coordination within fast-paced development cycles. These experiences have also provided valuable opportunities to collaborate with others and continuously expand my technical and creative skill set.
-				<br><br>
-				Here, you’ll find some of the projects I’ve worked on, each reflecting my dedication to creating engaging and meaningful interactive experiences.
-			</p>
-		</div>
+				<div class="AboutContent">
+					<div class="AboutPhoto">
+						<img src="Images/Profile.jpeg" alt="Profile Image" class="Profile">
+					</div>
+					<div class="AboutContent-Text">
+						<h2>
+							Hi! I'm Peter
+						</h2>
+						<p>
+							I am a software developer and game programmer based in Canada. My passion for game development began early, sparked by modding a childhood game, that introduced me to the world of programming. I’ve since continued to grow my skills through formal education, studying Game Programming at Humber College and Information Technology at York University.
+							<br><br>
+							I enjoy participating in game jams, as they are instrumental in honing my skills in time management, project scoping, and team coordination within fast-paced development cycles. These experiences have also provided valuable opportunities to collaborate with others and continuously expand my technical and creative skill set.
+							<br><br>
+							Here, you’ll find some of the projects I’ve worked on, each reflecting my dedication to creating engaging and meaningful interactive experiences.
+						</p>
+					</div>
+				</div>
 
-		<!-- Projects Section -->
-		<div class="Projects" id="Projects" style="height: 1500px; padding-top: 100px;">
-			<h1>Featured Projects</h1>
-			
+				<!-- Projects Section -->
+				<div class="PortfolioSction" id="Projects" style="height: 1500px; padding-top: 100px;">
+					<div class="Divider">
+						<hr><span>Featured Projects</span><hr>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!-- Contact Section -->
-		<div class="Contact" id="Contact">
-			<h1>Contact Me</h1>
+		<div class="ContactSction" id="Contact">
+			<div class="InvertedDivider">
+				<hr><span>Contact Me</span><hr>
+			</div>
+
 			<p>
-				You're welcome to reach out anytime at <a href="mailto:dev.petertran@gmail.com">my email</a> — I will do my best to respond promptly.
+				You're welcome to reach out anytime at my <a href="mailto:dev.petertran@gmail.com"><i class="fa fa-envelope"></i></a> — I will do my best to respond promptly.
 				<br>
 				Prefer social? I'm also active on various platforms — feel free to connect there if that's more convenient.
 			</p>
 
+			<a href="https://www.linkedin.com/in/petertran00/"><img src="Images/Logos/Linkedin_Logo.png" width="120" height="100"></a>
+			<a href="https://github.com/Dev-PeterTran"><img src="Images/Logos/Github_Dark_Logo.png" width="100" height="100"></a>
 		</div>
 
 		<!-- Footer Section-->
 		<div class="Footer">
-			<p>Copyright &copy by Peter Tran | All images, logos are used with permission.</p>
+			<p>Copyright &copy; by Peter Tran | All images, logos are used with permission.</p>
 		</div>
 
 		<script src="Scripts/Navbar.js"></script>
