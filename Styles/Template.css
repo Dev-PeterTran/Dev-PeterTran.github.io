@@ -4,7 +4,6 @@
 html {
 	scroll-behavior: smooth;
 }
-
 body {
 	margin: 0;
 	color: white;
@@ -34,11 +33,9 @@ body {
 	display: flex;
 	color: #0066ff;
 	font-size: 50px;
-
 	padding-bottom: 60px;
 	align-items: center;
 	justify-content: center;
-	
 }
 .Divider hr {
 	flex: 1;
@@ -54,10 +51,9 @@ body {
 .InvertedDivider {
 	gap: 1rem;
 	display: flex;
-	color: #000000;
+	color: #202020;
 	font-size: 50px;
-
-	padding-bottom: 60px;
+	padding-bottom: 20px;
 	align-items: center;
 	justify-content: center;
 }
@@ -66,5 +62,74 @@ body {
 	border: none;
 	height: 5px;
 	border-radius: 10px;
+	background-color: #202020;
+}
+.IntroudctionSction {
+	padding-top: 100px;
+	padding-bottom: 300px;
+}
+
+/*  ================
+	Projects Section
+	================ */
+.PortfolioSction {
+	padding-bottom: 150px;
+}
+.ProjectsContent {
+	gap: 30px;
+	display: flex;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.ProjectContainer {
+	width: 550px;
+	height: 700px;
+	display: block;
+	text-align: justify;
+	text-decoration: none;
 	background-color: #000000;
+	border-radius: 10px;
+	border: 1px solid #0066ff;
+	box-shadow: 0 0 10px rgba(0, 204, 255, 0.6);
+}
+.ProjectVideo {
+	height: 50%;
+	width: 100%;
+}
+.ProjectText {
+	height: 50%;
+	width: 100%;
+	padding: 1% 5%;
+	box-sizing: border-box;
+	background-color: #1a1a1a;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.ProjectText h2 {
+	display: flex;
+	color: #0066ff;
+	align-items: center;
+	transition: color 0.3s ease;
+	justify-content: space-between;
+}
+. ProjectArrow {
+	color: #0066ff;
+	transition: color 0.3s ease;
+}
+.ProjectText p {
+	color: #cccccc;
+}
+.ProjectContainer:hover .ProjectText h2,
+.ProjectContainer:hover .project-arrow {
+	color: #cccccc;
+}
+
+/*  ============== 
+	Footer Section 
+	============== */
+.Footer {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #202020;
 }

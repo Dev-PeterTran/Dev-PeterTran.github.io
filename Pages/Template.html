@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Home</title>
+		<title>Template</title>
 		
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
 	<body>
 		<!-- Navigation Bar -->
 		<nav id="Navbar">
-			<a href="index.html" class="Brand">Peter Tran</a>
+			<a href="../index.html" class="Brand">Peter Tran</a>
 
 			<!-- Hamburger Icon -->
 			<div class="Hamburger" onclick="ToggleMenu()">
@@ -28,14 +28,22 @@
 				<li class="Dropdown">
 					<a href="../index.html#Projects" onclick="ToggleDropdown(event)">Projects <span class="Triangle"></span></a>
 					<ul class="Dropdown-Menu">
-						<li><a href="#">Personal Projects</a></li>
-						<li><a href="Pages/ValentinesCoax.html">Valentine's Coax</a></li>
+						<!--<li><a href="Pages/PersonalProjects.html">Personal Projects</a></li>-->
+						<li><a href="ValentinesCoax.html">Valentine's Coax</a></li>
 					</ul>
 				</li>
 				<li class="RightNavItem"><a href="#">Resume</a></li>
 				<li class="RightNavItem"><a href="../index.html#Contact">Contact</a></li>
 			</ul>
 		</nav>
+
+		<div class="MainBodyContent">
+			<!-- Content below -->
+			<div style="height: 500px; padding-top: 100px;">
+				<h1>Welcome to my website</h1>
+				<p>Scroll down to see more!</p>
+			</div>
+		</div>
 
 		<!-- Footer Section-->
 		<div class="Footer">

@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="StyleSheet" href="Styles/Main.css">
+	<link rel="StyleSheet" href="Styles/Index.css">
 	<link rel="StyleSheet" href="Styles/Navbar.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -29,7 +29,7 @@
 				<li class="Dropdown">
 					<a href="#Projects" onclick="ToggleDropdown(event)">Projects <span class="Triangle"></span></a>
 					<ul class="Dropdown-Menu">
-						<li><a href="#">Personal Projects</a></li>
+						<!--<li><a href="#">Personal Projects</a></li>-->
 						<li><a href="Pages/ValentinesCoax.html">Valentine's Coax</a></li>
 					</ul>
 				</li>
@@ -38,13 +38,13 @@
 			</ul>
 		</nav>
 
-		<div class="MainBodyContent">
-			<!-- Content below -->
-			<div style="height: 500px; padding-top: 100px;">
-				<h1>Welcome to my website</h1>
-				<p>Scroll down to see more!</p>
-			</div>
+		<!-- Content below -->
+		<div style="height: 500px; padding-top: 100px;">
+			<h1>Welcome to my website</h1>
+			<p>Scroll down to see more!</p>
+		</div>
 
+		<div class="MainBodyContent">
 			<!-- Introudction Section -->
 			<div class="IntroudctionSction" id="About">
 				<div class="Divider">
@@ -68,15 +68,41 @@
 						</p>
 					</div>
 				</div>
+			</div>
 
-				<!-- Projects Section -->
-				<div class="PortfolioSction" id="Projects" style="height: 1500px; padding-top: 100px;">
-					<div class="Divider">
-						<hr><span>Featured Projects</span><hr>
-					</div>
+			<!-- Projects Section -->
+			<div class="PortfolioSction" id="Projects">
+				<div class="Divider">
+					<hr><span>Featured Projects</span><hr>
+				</div>
+				<div class="ProjectsContent">
+					<a href="" class="ProjectContainer">
+						<div class="ProjectVideo">
+							<video src="" width="100%" height="100%" autoplay muted loop></video>
+						</div>
+						<div class="ProjectText">
+							<h2>Project Testing 1<span class="ProjectArrow">&gt;</span></h2>
+							<p>
+								Testing
+							</p>
+						</div>
+					</a>
+					<a href="" class="ProjectContainer">
+						<div class="ProjectVideo">
+							<video src="" width="100%" height="100%" autoplay muted loop></video>
+						</div>
+						<div class="ProjectText">
+							<h2>Project Testing 2<span class="ProjectArrow">&gt;</span></h2>
+							<p>
+								Testing
+							</p>
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>
+
+		<div style="height: 30px; background: linear-gradient(to bottom, #353535, #0077ff);"></div>
 
 		<!-- Contact Section -->
 		<div class="ContactSction" id="Contact">
@@ -85,7 +111,7 @@
 			</div>
 
 			<p>
-				You're welcome to reach out anytime at my <a href="mailto:dev.petertran@gmail.com"><i class="fa fa-envelope"></i></a> — I will do my best to respond promptly.
+				You're welcome to reach out anytime at my <a href="mailto:dev.petertran@gmail.com" class="Email-Icon"><i class="fa fa-envelope"></i></a> — I will do my best to respond promptly.
 				<br>
 				Prefer social? I'm also active on various platforms — feel free to connect there if that's more convenient.
 			</p>
