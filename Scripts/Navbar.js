@@ -4,17 +4,6 @@ function ToggleMenu() {
 	navItems.classList.toggle('active');
 }
 
-// Toggles the dropdown submenu in mobile view when the "Projects" item is clicked
-function ToggleDropdown(event) {
-	event.preventDefault(); // Prevents default anchor link behavior
-	const dropdown = event.target.nextElementSibling;
-
-	// Only toggle dropdown in mobile view (≤800px width)
-	if (window.innerWidth <= 800 && dropdown) {
-		dropdown.classList.toggle('active-dropdown');
-	}
-}
-
 // Smoothly scrolls to a section on page load if a hash is present in the URL (e.g., #About)
 window.addEventListener('load', () => {
 	const hash = window.location.hash;

@@ -83,7 +83,7 @@
 	color: white;
 	text-decoration: none;
 	font-weight: bold;
-	font-size: 24px;
+	font-size: 36px;
 	position: relative;
 	display: inline-block;
 	z-index: 2;
@@ -113,41 +113,6 @@
 }
 
 /* =======================
-   Dropdown Menu (Desktop)
-   ======================= */
-.Dropdown {
-	position: relative;
-}
-
-/* Hidden by default */
-.Dropdown-Menu {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	background-color: #292929;
-	min-width: 200px;
-	text-align: left;
-	z-index: 1001;
-	overflow: hidden;
-	max-height: 0;
-	opacity: 0;
-	transform: translateY(-10px);
-	pointer-events: none;
-	transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
-}
-
-/* Show dropdown menu on hover */
-.Dropdown:hover .Dropdown-Menu {
-	max-height: 500px;
-	opacity: 1;
-	transform: translateY(0);
-	pointer-events: auto;
-}
-
-/* =======================
    Hamburger Menu (Mobile)
    ======================= */
 .Hamburger {
@@ -162,32 +127,6 @@
 	background-color: white;
 	margin: 5px;
 	transition: all 0.3s ease;
-}
-
-/* =======================
-   Dropdown Triangle Icon
-   ======================= */
-.Triangle {
-	display: inline-block;
-	margin-left: 4px;
-	border-top: 6px solid transparent;
-	border-bottom: 6px solid transparent;
-	border-left: 6px solid white;
-	transition: transform 0.3s ease;
-	vertical-align: middle;
-	margin-top: -5px;
-}
-
-/* Change triangle color on hover */
-.NavItems li a:hover .Triangle {
-	border-left-color: #0077ff;
-}
-
-/* Rotate triangle when hovered (desktop only) */
-@media (min-width: 801px) {
-	.Dropdown:hover .Triangle {
-		transform: rotate(90deg);
-	}
 }
 
 /* =======================
@@ -228,30 +167,5 @@
 	.NavItems li {
 		text-align: center;
 		width: 100%;
-	}
-
-	/* Flatten dropdown menu in mobile (no absolute positioning) */
-	.Dropdown {
-		position: static;
-	}
-
-	.Dropdown-Menu {
-		position: static;
-		background-color: #292929;
-		max-height: none;
-		opacity: 1;
-		transform: none;
-		pointer-events: auto;
-		padding: 0 15%;
-	}
-
-	/* Adjust spacing for dropdown items in mobile */
-	.Dropdown-Menu li a {
-		padding: 15px 20px;
-	}
-
-	/* Always rotate triangle in mobile view */
-	.Triangle {
-		transform: rotate(90deg);
 	}
 }

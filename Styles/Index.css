@@ -68,14 +68,13 @@ body {
 	background-color: #202020;
 }
 
+/*  ====================
+	Introduction Section
+	==================== */
 .IntroudctionSction {
 	padding-top: 100px;
 	padding-bottom: 300px;
 }
-
-/*  ====================
-	Introduction Section
-	==================== */
 .AboutContent {
 	gap: 50px;
 	display: flex;
@@ -105,8 +104,9 @@ img.Profile {
 /*  ================
 	Projects Section
 	================ */
-.PortfolioSction {
-	padding-bottom: 150px;
+.ProjectsSction {
+	padding-top: 100px;
+	padding-bottom: 300px;
 }
 .ProjectsContent {
 	gap: 30px;
@@ -150,7 +150,7 @@ img.Profile {
 	transition: color 0.3s ease;
 	justify-content: space-between;
 }
-. ProjectArrow {
+.ProjectArrow {
 	color: #0066ff;
 	transition: color 0.3s ease;
 }
@@ -158,10 +158,34 @@ img.Profile {
 	color: #cccccc;
 }
 .ProjectContainer:hover .ProjectText h2,
-.ProjectContainer:hover .project-arrow {
+.ProjectContainer:hover .ProjectArrow {
 	color: #cccccc;
 }
 
+/*  =======================
+	Projects Button Section
+	======================= */
+.MoreProjects {
+	text-align: center;
+	margin-top: 100px;
+}
+.MoreButton {
+	background-color: transparent;
+	color: #0066cc;
+	border: 2px solid #0066cc;
+	padding: 12px 28px;
+	font-size: 1rem;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.MoreButton:hover {
+	background-color: #0077ff;
+	color: #000;
+	box-shadow: 0 0 10px #0077ff;
+}
 
 /*  ==================
 	Contact Me Section
@@ -171,9 +195,10 @@ img.Profile {
 	padding-top: 25px;
 	padding-bottom: 50px;
 	color: #202020;
+
 	font-size: 20px;
 	text-align: center;
-	background-color: #0077ff;
+	background-color: #006bcc;
 }
 .ContactSction a.Email-Icon {
 	color: #202020;
