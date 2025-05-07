@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Template</title>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="StyleSheet" href="../Styles/ProjectTemplate.css">
+		<link rel="StyleSheet" href="../Styles/Navbar.css">
+	</head>
+	
+	<body>
+		<!-- Navigation Bar -->
+		<nav id="Navbar">
+			<a href="index.html" class="Brand">Peter Tran <span style="color: #ff4d4f;">|</span> <span id="TypingText"></span></a>
+
+			<!-- Hamburger Icon -->
+			<div class="Hamburger" onclick="ToggleMenu()">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+
+			<!-- Navigation Items -->
+			<ul class="NavItems" id="NavItems">
+				<li class="RightNavItem"><a href="#" onclick="GoBack()">Go Back <span>&gt;</span></a></li>
+			</ul>
+		</nav>
+
+		<div class="MainBodyContent">
+			<div style="height: 100px;"></div>
+
+			<video src="../Videos/1026.mp4" class="VideoDemo" autoplay muted loop></video>
+
+			<div style="width: 100%; height: 100px;"></div>
+		</div>
+
+		<!-- Footer Section-->
+		<div class="Footer">
+			<p>Copyright &copy by Peter Tran | All images, logos are used with permission.</p>
+		</div>
+
+		<script src="../Scripts/Navbar.js"></script>
+	</body>
+</html>

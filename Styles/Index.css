@@ -116,8 +116,8 @@ img.Profile {
 	justify-content: center;
 }
 .ProjectContainer {
-	width: 550px;
-	height: 700px;
+	width: 450px;
+	height: 500px;
 	display: block;
 
 	text-align: justify;
@@ -127,6 +127,9 @@ img.Profile {
 	border-radius: 10px;
 	border: 1px solid #0066ff;
 	box-shadow: 0 0 10px rgba(0, 204, 255, 0.6);
+}
+.ProjectVideo{
+	border-radius: 10px 10px 0px 0px;
 }
 .ProjectVideo {
 	height: 50%;
@@ -157,9 +160,13 @@ img.Profile {
 .ProjectText p {
 	color: #cccccc;
 }
+.ProjectContainer:hover {
+	border: 1px solid #ff4d4f;
+	box-shadow: 0 0 10px rgba(255, 77, 79, 0.6);
+}
 .ProjectContainer:hover .ProjectText h2,
 .ProjectContainer:hover .ProjectArrow {
-	color: #cccccc;
+	color: #ff4d4f;
 }
 
 /*  =======================
@@ -200,13 +207,17 @@ img.Profile {
 	text-align: center;
 	background-color: #006bcc;
 }
-.ContactSection a.Email-Icon {
-	color: #202020;
+.ContactSection a.EmailIcon {
+	color: #ff4d4f;
 	padding-bottom: 2px;
 	display: inline-block;
-	border-bottom: 2px solid #202020;
+	border-bottom: 2px solid #ff4d4f;
 }
-.ContactSection img {
+.Logo {
+	fill: #ff4d4f;
+
+	width: 100px;
+	height: 100px;
 	margin: 20px 10px;
 }
 

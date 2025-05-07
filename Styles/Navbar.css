@@ -83,7 +83,7 @@
 	color: white;
 	text-decoration: none;
 	font-weight: bold;
-	font-size: 36px;
+	font-size: 32px;
 	position: relative;
 	display: inline-block;
 	z-index: 2;
@@ -133,6 +133,10 @@
    Responsive (Mobile View)
    ======================= */
 @media (max-width: 800px) {
+	.Brand {
+		font-size: 16px;
+	}
+
 	/* Show hamburger icon in mobile view */
 	.Hamburger {
 		display: flex;
