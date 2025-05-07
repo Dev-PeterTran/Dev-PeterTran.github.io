@@ -52,3 +52,14 @@ const observer = new IntersectionObserver(
 sections.forEach(section => {
 	observer.observe(section);
 });
+
+// Returns to the previous page
+function GoBack() {
+	// Check if there is history to go back to
+	if (document.referrer && window.history.length > 1) {
+		window.history.back();
+	} else {
+		// Fallback if there's no history
+		window.location.href = "../index.html#Projects";
+	}
+}
