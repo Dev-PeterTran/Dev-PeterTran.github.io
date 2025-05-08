@@ -126,10 +126,11 @@ img.Profile {
 
 	border-radius: 10px;
 	border: 1px solid #0066ff;
+	transition: all 0.3s ease;
 	box-shadow: 0 0 10px rgba(0, 204, 255, 0.6);
 }
 .ProjectVideo{
-	border-radius: 10px 10px 0px 0px;
+	
 }
 .ProjectVideo {
 	height: 50%;
@@ -160,13 +161,16 @@ img.Profile {
 .ProjectText p {
 	color: #cccccc;
 }
-.ProjectContainer:hover {
-	border: 1px solid #ff4d4f;
-	box-shadow: 0 0 10px rgba(255, 77, 79, 0.6);
-}
 .ProjectContainer:hover .ProjectText h2,
 .ProjectContainer:hover .ProjectArrow {
-	color: #ff4d4f;
+	color: #9a4dff;
+	transition: all 0.3s ease;
+}
+.ProjectContainer:hover {
+	border-radius: 10px;
+	border: 1px solid #9a4dff;
+	transition: all 0.3s ease;
+	box-shadow: 0 0 10px rgba(60, 30, 100, 0.6);
 }
 
 /*  =======================
@@ -214,11 +218,35 @@ img.Profile {
 	border-bottom: 2px solid #ff4d4f;
 }
 .Logo {
-	fill: #ff4d4f;
 
+	transition: 0.3s ease-in-out;
+	border-bottom: 2px solid #ffffff;
+}
+#Linkedin, #Github {
+	display: inline-block;
 	width: 100px;
 	height: 100px;
-	margin: 20px 10px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center; 
+	transition: background-image 0.3s ease-in-out;
+	margin: 5px 10px;
+}
+
+/* Default background images */
+#Linkedin {
+  background-image: url('../Images/Logos/Linkedin_Logo.png');
+}
+#Github {
+  background-image: url('../Images/Logos/Github_Logo.png');
+}
+
+/* Hover effect */
+#Linkedin:hover {
+  background-image: url('../Images/Logos/Linkedin_Logo2.png');
+}
+#Github:hover {
+  background-image: url('../Images/Logos/Github_Logo2.png');
 }
 
 /*  ============== 
