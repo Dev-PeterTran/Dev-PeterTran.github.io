@@ -163,12 +163,12 @@ img.Profile {
 }
 .ProjectContainer:hover .ProjectText h2,
 .ProjectContainer:hover .ProjectArrow {
-	color: #9a4dff;
+	color: #ff4d4f;
 	transition: all 0.3s ease;
 }
 .ProjectContainer:hover {
 	border-radius: 10px;
-	border: 1px solid #9a4dff;
+	border: 1px solid #ff4d4f;
 	transition: all 0.3s ease;
 	box-shadow: 0 0 10px rgba(60, 30, 100, 0.6);
 }
