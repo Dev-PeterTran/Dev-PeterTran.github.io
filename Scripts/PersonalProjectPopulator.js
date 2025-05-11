@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const a = document.createElement('a');
 
         // Link to project detail page with query param
-        a.href = `Pages/ProjectTemplate.html?id=${project.ID}`;
+        a.href = `Pages/ProjectShowcase.html?id=${project.ID}`;
 
         // Apply styling class
         a.className = 'ProjectContainer';
