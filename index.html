@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="StyleSheet" href="Styles/Index.css">
-	<link rel="StyleSheet" href="Styles/Navbar.css">
+	<link rel="styleSheet" href="Styles/Index.css">
+	<link rel="styleSheet" href="Styles/Navbar.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 	
@@ -31,15 +31,13 @@
 				<li class="RightNavItem"><a href="#Contact">Contact Info</a></li>
 			</ul>
 		</nav>
+		<script src="Scripts/Navbar.js"></script>
 
-		<!-- Content below -->
-		<div style="height: 500px; padding-top: 100px;">
-			
-		</div>
+		<div style="height: 500px"></div>
 
 		<div class="MainBodyContent">
 			<!-- Introudction Section -->
-			<div class="IntroudctionSction" id="About">
+			<div class="IntroudctionSection" id="About">
 				<div class="Divider">
 					<hr><span>About Me</span><hr>
 				</div>
@@ -63,23 +61,16 @@
 				</div>
 			</div>
 
+			<div style="height: 100px"></div>
+
 			<!-- Projects Section -->
-			<div class="ProjectSction" id="Projects">
+			<div class="ProjectSection" id="Projects">
 				<div class="Divider">
 					<hr><span>Featured Projects</span><hr>
 				</div>
-				<div class="ProjectsContent">
-					<a href="Pages/ProjectTemplate.html" class="ProjectContainer">
-						<div class="ProjectVideo">
-							<video src="Videos/1026.mp4" style="width: 100%; height: 100%; border-radius: 15px 15px 0px 0px;" autoplay muted loop></video>
-						</div>
-						<div class="ProjectText">
-							<h2>Project Testing 1<span class="ProjectArrow">&gt;</span></h2>
-							<p>
-								Testing Testing Testing TestingTesting TestingTesting TestingTesting TestingTesting TestingTesting TestingTesting TestingTesting TestingTesting TestingTesting TestingTesting TestingTesting TestingTesting TestingTesting TestingTesting TestingTesting TestingTesting Testing
-							</p>
-						</div>
-					</a>
+				<div class="ProjectsContent" id="ProjectsContent">
+					<!-- Auto Populate Projects -->
+					 <script src="Scripts/PersonalProjectPopulator.js"></script>
 				</div>
 
 				<!--
@@ -90,8 +81,7 @@
 			</div>
 		</div>
 
-		<!-- Spacer -->
-		<div style="height: 250px;"></div>
+		<div style="height: 100px"></div>
 
 		<!-- Fade Effect -->
 		<div style="height: 30px; background: linear-gradient(to bottom, #353535, #006bcc);"></div>
@@ -116,7 +106,5 @@
 		<div class="Footer">
 			<p>Copyright &copy; by Peter Tran | All images, logos are used with permission.</p>
 		</div>
-
-		<script src="Scripts/Navbar.js"></script>
 	</body>
 </html>

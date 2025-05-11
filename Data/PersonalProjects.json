@@ -1,0 +1,54 @@
+[
+  {
+    "ID": "Project1",
+    "Title": "Project Testing 1",
+    "VideoPath": "../Videos/1026.mp4",
+    
+    "Pitch": "This is a sample pitch for project 1.",
+
+    "Role": "Lead Programmer",
+    "TeamSize": "4",
+    "DevelopmentTime": "2 months",
+    "Engine": "Unity",
+    "Language": "C#",
+
+    "Platform": "Windows, Web",
+    "Genre": "Platformer, Puzzle",
+    "Perspective": "Side-scroller",
+    "Status": "Completed",
+
+    "Concept": "A puzzle platformer about shifting gravity to solve challenges.",
+
+    "SuperClass": "Focus on player feedback and moment-to-moment mechanics.",
+
+    "Recap": "Built during a 48-hour jam; overcame technical debt and added polish.",
+
+    "Link": "Pages/ProjectTemplate.html?ID=Project1"
+  },
+  {
+    "ID": "Project2",
+    "Title": "Project Testing 2",
+    "VideoPath": "../Videos/1026.mp4",
+    
+    "Pitch": "This is a sample pitch for project 2.",
+
+    "Role": "Developer",
+    "TeamSize": "1",
+    "DevelopmentTime": "1 hour",
+    "Engine": "Unity",
+    "Language": "C#",
+
+    "Platform": "Android",
+    "Genre": "N/A",
+    "Perspective": "N/A",
+    "Status": "N/A",
+
+    "Concept": "Still Thinking",
+
+    "SuperClass": "No super class yet",
+
+    "Recap": "Nothing to recap",
+
+    "Link": "Pages/ProjectTemplate.html?ID=Project2"
+  }
+]

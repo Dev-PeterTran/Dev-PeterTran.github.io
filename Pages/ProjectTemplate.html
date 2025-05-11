@@ -27,14 +27,15 @@
 				<li class="RightNavItem"><a href="" onclick="GoBack()">Go Back <span>&gt;</span></a></li>
 			</ul>
 		</nav>
+		<script src="../Scripts/Navbar.js"></script>
 
 		<div class="MainBodyContent">
 			<div style="height: 90px;"></div>
 
 			<div class="ProjectWrapper">
 				<div class="VideoWrapper">
-					<video src="../Videos/1026.mp4" class="VideoDemo" autoplay muted loop></video>
-					<div class="ProjectTitle"><hr><span>Project Title</span><hr></div>
+					<video id="ProjectVideo" src="#" class="VideoDemo" autoplay muted loop></video>
+					<div class="ProjectTitle"><hr><span id="ProjectTitle">Project Title</span><hr></div>
 				</div>
 
 				<div class="ProjectInfoContainer">
@@ -42,23 +43,23 @@
 						<p class="InfoHeader">Project Info</p>
 						<div class="InfoItem">
 							<img src="../Images/Icons/Role.png" alt="Role" class="Icons">
-							<p><span style="color: #9a4dff;">Role:</span> Developer</p>
+							<p><span style="color: #9a4dff;">Role: </span><span id="RoleDetail"></span></p>
 						</div>
 						<div class="InfoItem">
 							<img src="../Images/Icons/Team.png" alt="Team" class="Icons">
-							<p><span style="color: #9a4dff;">Team Size:</span> 1</p>
+							<p><span style="color: #9a4dff;">Team Size: </span><span id="SizeDetail"></span></p>
 						</div>
 						<div class="InfoItem">
 							<img src="../Images/Icons/Time.png" alt="Time" class="Icons">
-							<p><span style="color: #9a4dff;">Development Time:</span> 7 weeks</p>
+							<p><span style="color: #9a4dff;">Development Time: </span><span id="TimeDetail"></span></p>
 						</div>
 						<div class="InfoItem">
 							<img src="../Images/Icons/Engine.png" alt="Engine" class="Icons">
-							<p><span style="color: #9a4dff;">Game Engine:</span> Unity</p>
+							<p><span style="color: #9a4dff;">Game Engine: </span><span id="EngineDetail"></span></p>
 						</div>
 						<div class="InfoItem">
 							<img src="../Images/Icons/Language.png" alt="Language" class="Icons">
-							<p><span style="color: #9a4dff;">Programming Language:</span> C#</p>
+							<p><span style="color: #9a4dff;">Programming Language: </span><span id="LanguageDetail"></span></p>
 						</div>
 					</div>
 
@@ -66,19 +67,19 @@
 						<p class="InfoHeader">Game Info</p>
 						<div class="InfoItem">
 							<img src="../Images/Icons/Platform.png" alt="Polatform" class="Icons">
-							<p><span style="color: #9a4dff;">Platform:</span> Android</p>
+							<p><span style="color: #9a4dff;">Platform: </span><span id="PlatformDetail"></span></p>
 						</div>
 						<div class="InfoItem">
 							<img src="../Images/Icons/Genre.png" alt="Genre" class="Icons">
-							<p><span style="color: #9a4dff;">Genre(s):</span> Casual</p>
+							<p><span style="color: #9a4dff;">Genre(s): </span><span id="GenreDetail"></span></p>
 						</div>
 						<div class="InfoItem">
 							<img src="../Images/Icons/Perspective.png" alt="Perspective" class="Icons">
-							<p><span style="color: #9a4dff;">Perspective:</span> 2D</p>
+							<p><span style="color: #9a4dff;">Perspective: </span><span id="PerspectiveDetail"></span></p>
 						</div>
 						<div class="InfoItem">
 							<img src="../Images/Icons/Status.png"  alt="Status" class="Icons">
-							<p><span style="color: #9a4dff;">Status:</span> In Progress</p>
+							<p><span style="color: #9a4dff;">Status: </span><span id="StatusDetail"></span></p>
 						</div>
 					</div>
 				</div>
@@ -92,8 +93,8 @@
 					<span>Game Concept</span>
 					<hr>
 				</div>
-				<p>
-					A pair of railguns that are mounted on the waist, they have an excellent rate of fire and high ammunition capacity. Folded into three parts when not in use, they can be used to deal with situations where beam weapons are ineffective, such as against underwater enemies, and are the suit's most powerful solid-based weaponry. They are developed based on the Duel Gundam Assault Shroud's "Shiva" railgun. Although the railguns have foldable grips at the sides, they can be fired without the grips being held in hands. Additionally, the last section of each railgun is equipped with a thruster that can be used for attitude controls.
+				<p id="ConceptDetail">
+					
 				</p>
 			</div>
 
@@ -104,8 +105,8 @@
 					<hr>
 				</div>
 
-				<p>
-					A pair of railguns that are mounted on the waist, they have an excellent rate of fire and high ammunition capacity. Folded into three parts when not in use, they can be used to deal with situations where beam weapons are ineffective, such as against underwater enemies, and are the suit's most powerful solid-based weaponry. They are developed based on the Duel Gundam Assault Shroud's "Shiva" railgun. Although the railguns have foldable grips at the sides, they can be fired without the grips being held in hands. Additionally, the last section of each railgun is equipped with a thruster that can be used for attitude controls.
+				<p id="SuperClassDetail">
+					
 				</p>
 			</div>
 
@@ -116,8 +117,8 @@
 					<hr>
 				</div>
 
-				<p>
-					A pair of railguns that are mounted on the waist, they have an excellent rate of fire and high ammunition capacity. Folded into three parts when not in use, they can be used to deal with situations where beam weapons are ineffective, such as against underwater enemies, and are the suit's most powerful solid-based weaponry. They are developed based on the Duel Gundam Assault Shroud's "Shiva" railgun. Although the railguns have foldable grips at the sides, they can be fired without the grips being held in hands. Additionally, the last section of each railgun is equipped with a thruster that can be used for attitude controls.
+				<p id="RecapDetail">
+					
 				</p>
 			</div>
 		</div>	
@@ -126,6 +127,6 @@
 			<p>Copyright &copy; by Peter Tran | All images, logos are used with permission.</p>
 		</div>
 
-		<script src="../Scripts/Navbar.js"></script>
+		<script src="../Scripts/ProjectPagePopulator.js"></script>
 </body>
 </html>

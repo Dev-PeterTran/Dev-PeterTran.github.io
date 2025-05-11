@@ -3,6 +3,7 @@
 	=============== */
 html {
 	scroll-behavior: smooth;
+	scroll-padding-top: 100px;
 }
 
 body {
@@ -109,15 +110,15 @@ img.Profile {
 	padding-bottom: 300px;
 }
 .ProjectsContent {
-	gap: 30px;
+	gap: 70px;
 	display: flex;
 	margin: 0 auto;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 .ProjectContainer {
-	width: 450px;
-	height: 500px;
+	width: 500px;
+	height: 550px;
 	display: block;
 
 	text-align: justify;
@@ -128,9 +129,6 @@ img.Profile {
 	border: 1px solid #0066ff;
 	transition: all 0.3s ease;
 	box-shadow: 0 0 10px rgba(0, 204, 255, 0.6);
-}
-.ProjectVideo{
-	
 }
 .ProjectVideo {
 	height: 50%;
