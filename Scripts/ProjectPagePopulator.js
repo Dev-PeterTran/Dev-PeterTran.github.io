@@ -43,9 +43,36 @@ if (!projectId) {
       document.getElementById('ConceptDetail').textContent = project.Concept;
 
       document.getElementById('SuperClassDetail').textContent = project.SuperClass;
+      // Load and display the code from the CodePath
+      const codeBlock = document.getElementById('codeBlock');
+      fetch(project.CodePath)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Code file not found.');
+          }
+          return response.text();
+        })
+        .then(code => {
+          codeBlock.textContent = code;
+          hljs.highlightElement(codeBlock);
+        })
+      .catch(error => {
+        codeBlock.textContent = "// Failed to load code: " + error.message;
+      });
 
       document.getElementById('RecapDetail').textContent = project.Recap;
     })
     // Log any errors that occur during the fetch or processing
     .catch(error => console.error('Error loading project details:', error));
 });
+
+// Toggle button to show code
+let codeLoaded = false;
+function toggleCode() {
+  const codeContent = document.getElementById("codeContent");
+  const toggleBtn = document.getElementById("toggleBtn");
+  const codeBlock = document.getElementById("codeBlock");
+  const isExpanded = codeContent.classList.toggle("expanded");
+
+  toggleBtn.textContent = isExpanded ? "Hide Code ▲" : "Show Code ▼";
+}

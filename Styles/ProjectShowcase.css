@@ -147,6 +147,49 @@ body {
 	justify-content: flex-start;
 }
 
+/*  ====================
+	Super Class Showcase 
+	==================== */
+.CodeWindow {
+	background-color: #1e1e1e;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+	width: 100%;
+	margin: auto;
+}
+.CodeHeader {
+	background-color: #252525;
+	padding: 0.75rem 1rem;
+	font-size: 1rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+.ToggleBtn {
+	background: none;
+	border: none;
+	color: #9a4dff;
+	font-size: 1rem;
+	cursor: pointer;
+}
+.CodeContent {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease;
+}
+.CodeContent.expanded {
+	max-height: 1000px;
+	overflow: auto;
+	margin:1rem;
+}
+pre {
+	margin: 0;
+	white-space: pre;
+}
+
 /*  ============== 
 	Footer Section 
 	============== */
